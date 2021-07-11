@@ -1,0 +1,381 @@
+:root{
+    --hue-color : 240;
+    --background-color : hsl(var(--hue-color),100%,99%);
+    --background-color-2 : hsl(var(--hue-color),25%,25%);
+    --background-color-3 : hsl(var(--hue-color),54%,61%);
+    --font-color  : hsl(var(--hue-color),37%,35%);
+    --shadow : hsl(var(--hue-color), 71%, 97%);
+    --shadow-2 : #1b1c49;
+    --contest-font: hsl(var(--hue-color), 74%, 16%);
+    --table-bg : #dddddd;
+    --table-head-bg :#b5b5b5;
+    --container-color: hsl(var(--hue-color),24%,96%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ----------------------HEAD------------------------ */
+.head{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    /* border: 1px solid black; */
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0 5rem var(--shadow);
+}
+.head_title{
+    font-size: 4rem;
+    padding-left: 3rem;
+}
+
+
+.head_log{
+    display: flex;
+    /* border: 1px solid black; */
+}
+.home_login,
+.home_signup{
+    font-size: 2rem;
+
+    border-radius: 2rem;
+    border: 2px solid var(--font-color);
+    height: 4rem;
+    width: 10rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+
+.home_login:hover,
+.home_signup:hover{
+    font-size: 2.3rem;
+    height: 4.4rem;
+    width: 10.4rem;
+    box-shadow: 0 0 1rem #c7c8ff;
+    background-color: var(--font-color);
+    color: whitesmoke;
+
+}
+sx{
+    font-size: 4rem;
+    background-color: var(--font-color);
+    color: whitesmoke;
+    border-radius: 2px;
+}
+@media screen and (max-width : 768px) {
+    .head{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .head_log,
+    .head_title{
+        /* border: 1px solid black; */
+        
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* -------------CONTAINER----------------- */
+.container{
+    
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15rem;
+}
+
+.contents
+{
+    /* border: 3px solid greenyellow; */
+    border-radius: 2rem;
+    width: 45%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:relative;
+    box-shadow: 0 0 2rem var(--background-color-3);
+}
+
+.contents::before{
+    content: "Hello World ";
+    position: absolute;
+    top: -40px;
+    /* border: 1px solid black; */
+
+    height: 4rem;
+    width: 15rem;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-2);
+    color: whitesmoke;
+    font-size: 2rem;
+    box-shadow: 0 0 2rem var(--background-color-3);
+
+}
+.home_cp::before{
+    content: 'Competitive Programming';
+    width: 25rem;
+}
+.home_ide::before{
+    content: 'Online IDE';
+}
+
+.contents>p
+{
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+.contents .go_to
+{
+    font-size: 2rem;
+    /* border: 1px solid black; */
+    border-radius: 3rem;
+
+    height: 4rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 1rem;
+    background-color: var(--background-color-3);
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.contents .go_to:hover{
+    font-size: 2.3rem;
+    box-shadow: 0 0 3rem var(--shadow);
+}
+
+@media screen and (max-width : 768px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contents{
+        margin: 5rem;
+        width: 90%;
+        /* border: 1px solid green; */
+    }
+
+}
+/* -------------------------- CONTEST -----------------  */
+.contests
+{
+    display: flex;
+    flex-direction: column; 
+    /* position: relative;   */
+    /* border: 1px solid black  ; */
+    width: 100%;
+    
+}
+
+.contest_website_name,
+.contest_website_name:focus
+{
+    /* border: 3px solid red; */
+    margin-top: 3rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    color: var(--contest-font);
+    outline: hidden;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+
+.contest_website_name::before,
+.contest_website_name::after
+{
+    content: ' ';
+    /* border: 1px solid green; */
+    position: absolute;
+    left: 0;
+    /* bottom: -0.5rem; */
+    height: .5rem;
+    width: 100%;
+    background: linear-gradient(90deg,transparent,var(--shadow-2), transparent);
+}
+.contest_website_name::after{
+    bottom: 0;
+}
+
+
+td,
+td a{
+    font-size: 2rem;
+}
+
+.contests_subPart{
+    /* border: 1px solid green; */
+    margin-top: 3rem;
+}
+.contest{
+    /* border: 1px solid red; */
+    background-color: var(--table-bg);
+    height: 5rem;
+    text-align: center;
+}
+.contest_table_head{
+    background-color: var(--table-head-bg);
+    height: 3rem;
+}
+th{
+    font-size: 2rem;
+}
+
+.contest_table_head{
+    font-weight: 600;
+}
+.contests_container{
+    position: relative;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.back{
+    font-size: 3rem;
+    position: absolute;
+    left: 1rem;
+    
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back:hover{
+    box-shadow: 0 0 5rem var(--shadow-2);
+    border: 3px solid var(--shadow-2);
+}
+
+
+/* <!-- ==================Contest Websites======================= --> */
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+.nav_list{
+    grid-template-columns: repeat(2,1fr);
+}
+.nav__item{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.web_logo{
+    height: 6rem;
+    /* border: 2px solid green; */
+}
+.web_name{
+    font-size: 2rem;
+    align-items: center;
+}
+#codeforces{
+    height: 3rem;
+}
+.wrap{
+    /* border: 3px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    border-radius: 2rem;
+    padding: 1rem;
+    transition: .5s;
+}
+.wrap:hover{
+    box-shadow: 0 0 2rem var(--shadow-2);
+}
+
+.websitesContainer{
+    /* border: 2px solid red; */
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);;
+}
+
+.web_content{
+    border: 1px solid green;
+    display: flex;
+    background-color:#fff    ;
+    width: fit-content;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    padding-top: 5rem;
+    position: absolute;
+    justify-content: center;
+}
+.web_content::before{
+    content: "Contest Sites";
+    position: absolute;
+    top: -2.5rem;
+    font-size: 3rem;
+    background-color: var(--font-color);
+    color: whitesmoke;
+    padding: 1rem;
+    border-radius: 3rem;
+
+    /* right:0; */
+}
+.cross{
+    font-size: 4rem;
+    position: relative;
+    right: 0;
+    top: -3rem;
+    cursor: pointer;
+    
+
+}
+
+
+.hide{
+    visibility: hidden;
+    display: none;
+}
