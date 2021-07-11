@@ -112,7 +112,7 @@ sx{
     /* border: 3px solid greenyellow; */
     border-radius: 2rem;
     width: 45%;
-    height: 25rem;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,8 +127,8 @@ sx{
     top: -40px;
     /* border: 1px solid black; */
 
-    height: 4rem;
-    width: 15rem;
+    height: 40px;
+    width: fit-content;
     border-radius: 2rem 2rem 0 0;
     display: flex;
     justify-content: center;
@@ -152,6 +152,9 @@ sx{
     font-size: 2rem;
     padding: 1rem;
     text-align: center;
+}
+.contents:nth-child(n-1){
+    padding-bottom: 5rem;
 }
 .contents .go_to
 {
@@ -183,12 +186,19 @@ sx{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
     .contents{
         margin: 5rem;
         width: 90%;
         /* border: 1px solid green; */
     }
+    /* .contents>p{
+        font-size: 1rem;
+    } */
+    /* .contents::before{
+        font-size: 1.5rem;
+    } */
 
 }
 /* -------------------------- CONTEST -----------------  */
