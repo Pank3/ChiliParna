@@ -386,14 +386,31 @@ th{
     .web_content::before{
         font-size: 2rem;
     }
+    .web_content{
+        width: 90vw;
+    }
     .web_logo{
         height: 3rem;
     }
     .web_name{
         font-size: 1rem;
     }
-}
+    #atcoder,
+    #codechef,
+    #hackerrank,
+    #leetcode
+    {
+        height: 6rem;
+    }
 
+    #codeforces{
+        height: 1.5rem;
+    }
+    #topcoder{
+        height: 4rem;
+    }
+
+}
 
 .hide{
     visibility: hidden;
