@@ -193,12 +193,12 @@ sx{
         width: 90%;
         /* border: 1px solid green; */
     }
-    /* .contents>p{
+    .contents>p{
         font-size: 1rem;
-    } */
-    /* .contents::before{
+    }
+    .contents::before{
         font-size: 1.5rem;
-    } */
+    }
 
 }
 /* -------------------------- CONTEST -----------------  */
