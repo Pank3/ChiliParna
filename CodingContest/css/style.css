@@ -380,8 +380,18 @@ th{
     right: 0;
     top: -3rem;
     cursor: pointer;
-    
+}
 
+@media screen and (max-width : 768px){
+    .web_content::before{
+        font-size: 2rem;
+    }
+    .web_logo{
+        height: 3rem;
+    }
+    .web_name{
+        font-size: 1rem;
+    }
 }
 
 
